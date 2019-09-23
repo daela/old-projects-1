@@ -1,0 +1,28 @@
+algorithm
+
+  defarray integer : myarray [ 10 ] ;
+  defvar integer : i ;
+
+begin
+  assign 1 to i ;
+  while i <= 10 do
+    assign 0 to myarray [ i ] ;
+    assign ( i + 1 ) to i ;
+  endwhile ;
+
+  assign 6 to i ;
+  assign 5 to myarray [ 5 ] ;
+  assign 10 to myarray [ i ] ;
+  assign myarray [ i ] + myarray [ i - 1 ] to myarray [ 8 ] ;
+
+  if myarray [ 8 ] < 100 then
+    write ( myarray [ 8 ] ) ;
+  endif ;
+
+  assign 1 to i ;
+  while i < 11 do
+    write ( " myarrary [ " , i , " ] = " , myarray [ i ] ) ;
+    assign i + 1 to i ;
+  endwhile ;
+
+endalg

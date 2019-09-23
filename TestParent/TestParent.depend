@@ -1,0 +1,157 @@
+# depslib dependency file v1.0
+1202497093 source:c:\portable\projects\include\nac\procutil.cpp
+	"procutil.h"
+
+1202497175 c:\portable\projects\include\nac\procutil.h
+	<windows.h>
+	<string.h>
+	<Tlhelp32.h>
+	"strmanip.h"
+
+1202448773 c:\portable\projects\include\nac\strmanip.h
+	<string>
+	<locale>
+	<iostream>
+
+1202448813 source:c:\portable\projects\include\nac\strmanip.cpp
+	"strmanip.h"
+
+1202928231 source:c:\portable\projects\testparent\main.cpp
+	<set>
+	<queue>
+	<map>
+	<string>
+	<windows.h>
+	<iostream>
+	<nac/DllHook.h>
+
+1202481925 source:c:\portable\projects\include\nac\criticalsection.cpp
+	"CriticalSection.h"
+
+1202481007 c:\portable\projects\include\nac\criticalsection.h
+	<windows.h>
+
+1202429416 source:c:\portable\projects\include\nac\event.cpp
+	"Event.h"
+
+1202429371 c:\portable\projects\include\nac\event.h
+	<windows.h>
+	<string>
+
+1202704510 source:c:\portable\projects\include\nac\importaddresstable.cpp
+	"ImportAddressTable.h"
+
+1202704534 c:\portable\projects\include\nac\importaddresstable.h
+	<windows.h>
+	<iostream>
+	<string>
+	<set>
+	<map>
+	"strmanip.h"
+
+1202698777 source:c:\portable\projects\include\nac\pipe.cpp
+	"Pipe.h"
+
+1202698760 c:\portable\projects\include\nac\pipe.h
+	<windows.h>
+	<string>
+	<sstream>
+
+1202698821 source:c:\portable\projects\include\nac\process.cpp
+	"Process.h"
+
+1202692773 c:\portable\projects\include\nac\process.h
+	<windows.h>
+	<Tlhelp32.h>
+	<vector>
+	<string>
+	<map>
+	"Pipe.h"
+
+1202688860 source:c:\portable\projects\include\nac\processlauncher.cpp
+	"ProcessLauncher.h"
+
+1202689161 c:\portable\projects\include\nac\processlauncher.h
+	<windows.h>
+	<string>
+	"strmanip.h"
+	"Process.h"
+
+1202704510 source:d:\gn\dev\portable\projects\include\nac\importaddresstable.cpp
+	"ImportAddressTable.h"
+
+1202704534 d:\gn\dev\portable\projects\include\nac\importaddresstable.h
+	<windows.h>
+	<iostream>
+	<string>
+	<set>
+	<map>
+	"strmanip.h"
+
+1202448773 d:\gn\dev\portable\projects\include\nac\strmanip.h
+	<string>
+	<locale>
+	<iostream>
+
+1202698777 source:d:\gn\dev\portable\projects\include\nac\pipe.cpp
+	"Pipe.h"
+
+1202698760 d:\gn\dev\portable\projects\include\nac\pipe.h
+	<windows.h>
+	<string>
+	<sstream>
+
+1202698821 source:d:\gn\dev\portable\projects\include\nac\process.cpp
+	"Process.h"
+
+1202692773 d:\gn\dev\portable\projects\include\nac\process.h
+	<windows.h>
+	<Tlhelp32.h>
+	<vector>
+	<string>
+	<map>
+	"Pipe.h"
+
+1202688860 source:d:\gn\dev\portable\projects\include\nac\processlauncher.cpp
+	"ProcessLauncher.h"
+
+1202689161 d:\gn\dev\portable\projects\include\nac\processlauncher.h
+	<windows.h>
+	<string>
+	"strmanip.h"
+	"Process.h"
+
+1202448813 source:d:\gn\dev\portable\projects\include\nac\strmanip.cpp
+	"strmanip.h"
+
+1202890176 source:d:\gn\dev\portable\projects\testparent\main.cpp
+	<set>
+	<queue>
+	<map>
+	<string>
+	<windows.h>
+	<iostream>
+	<nac/DllHook.h>
+
+1202889797 source:d:\gn\dev\portable\projects\include\nac\dllhook.cpp
+	"DllHook.h"
+
+1202885625 d:\gn\dev\portable\projects\include\nac\dllhook.h
+	<map>
+	<set>
+	<queue>
+	<string>
+	<windows.h>
+	"strmanip.h"
+
+1202928348 source:c:\portable\projects\include\nac\dllhook.cpp
+	"DllHook.h"
+
+1202927733 c:\portable\projects\include\nac\dllhook.h
+	<map>
+	<set>
+	<queue>
+	<string>
+	<windows.h>
+	"strmanip.h"
+

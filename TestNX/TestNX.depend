@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1216620932 source:d:\game\include\nx\final\memory.cpp
+	"memory.hpp"
+
+1217131886 d:\game\include\nx\final\common.hpp
+	"winos.hpp"
+
+1216508535 d:\game\include\nx\final\win32.hpp
+	<windows.h>
+
+1218078506 source:d:\gn\dev\portable\projects\testnx\main.cpp
+	<nx/common.hpp>
+	<nx/endian.hpp>
+	<nx/memory.hpp>
+	<nx/number.hpp>
+	<iostream>
+	<sstream>
+
+1216621051 d:\game\include\nx\final\memory.hpp
+	"common.hpp"
+
+1216509970 source:d:\game\include\nx\final\endian.cpp
+	"endian.hpp"
+
+1216511237 d:\game\include\nx\final\endian.hpp
+	"common.hpp"
+
+1216512293 d:\game\include\nx\final\winos.hpp
+	<windows.h>
+
+1217124660 source:d:\game\include\nx\final\number.cpp
+	"number.hpp"
+
+1217129843 d:\game\include\nx\final\number.hpp
+	"common.hpp"
+	"endian.hpp"
+	"memory.hpp"
+	<iostream>
+
+1217131886 d:\codebase\nx\common.hpp
+	"winos.hpp"
+
+1216512293 d:\codebase\nx\winos.hpp
+	<windows.h>
+
+1216511237 d:\codebase\nx\endian.hpp
+	"common.hpp"
+
+1216621051 d:\codebase\nx\memory.hpp
+	"common.hpp"
+
+1217129843 d:\codebase\nx\number.hpp
+	"common.hpp"
+	"endian.hpp"
+	"memory.hpp"
+	<iostream>
+
+1217124660 source:d:\codebase\nx\number.cpp
+	"number.hpp"
+
+1216509970 source:d:\codebase\nx\endian.cpp
+	"endian.hpp"
+

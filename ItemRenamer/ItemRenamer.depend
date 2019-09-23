@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1214021573 source:d:\gn\dev\portable\projects\itemrenamer\main.cpp
+	<string.h>
+	<iostream>
+	<fstream>
+	<string>
+	<algorithm>
+	<sstream>
+	<vector>
+	<set>
+	<windows.h>
+	"../include/md5.h"
+
+1202414218 d:\gn\dev\portable\projects\include\md5.h
+
+1214021591 source:d:\gn\dev\portable\projects\itemrenamer\resource.rc
+

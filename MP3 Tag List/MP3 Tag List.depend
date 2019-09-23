@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1222643138 source:d:\gn\dev\portable\projects\mp3 tag list\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+
+1222639538 source:z:\gn\dev\portable\projects\mp3 tag list\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<windows.h>
+

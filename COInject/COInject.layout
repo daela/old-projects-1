@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="2485" topLine="78" />
+	</File>
+	<File name="..\include\nac\ImportAddressTable.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="3888" topLine="101" />
+	</File>
+	<File name="..\include\nac\ImportAddressTable.h" open="1" top="0" tabpos="3">
+		<Cursor position="1173" topLine="26" />
+	</File>
+	<File name="..\include\nac\Process.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2581" topLine="107" />
+	</File>
+	<File name="..\include\nac\Process.h" open="1" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\include\nac\strmanip.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="..\include\nac\strmanip.h" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

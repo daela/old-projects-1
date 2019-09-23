@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="COItem.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2786" topLine="36" />
+	</File>
+	<File name="COItem.h" open="1" top="0" tabpos="4">
+		<Cursor position="337" topLine="0" />
+	</File>
+	<File name="COItemAdd.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="728" topLine="0" />
+	</File>
+	<File name="COItemAdd.h" open="1" top="0" tabpos="7">
+		<Cursor position="308" topLine="0" />
+	</File>
+	<File name="COItemType.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="3351" topLine="49" />
+	</File>
+	<File name="COItemType.h" open="1" top="0" tabpos="5">
+		<Cursor position="169" topLine="0" />
+	</File>
+	<File name="COStats.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="337" topLine="0" />
+	</File>
+	<File name="COStats.h" open="1" top="0" tabpos="2">
+		<Cursor position="557" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="16155" topLine="353" />
+	</File>
+</CodeBlocks_layout_file>

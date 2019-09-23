@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1217290304 source:d:\gn\dev\portable\projects\nconquer2\main.cpp
+	<windows.h>
+	<string>
+	<sstream>
+	<fstream>
+	"madCHook.hpp"
+	"md5.h"
+
+1217271622 d:\gn\dev\portable\projects\nconquer2\madchook.hpp
+	<string>
+	<windows.h>
+
+1202414218 d:\gn\dev\portable\projects\nconquer2\md5.h
+
+1202004135 source:d:\gn\dev\portable\projects\nconquer2\md5.cpp
+	<assert.h>
+	<memory.h>
+	<stdio.h>
+	<string.h>
+	"md5.h"
+
+1217271594 source:d:\gn\dev\portable\projects\nconquer2\madchook.cpp
+	"madCHook.hpp"
+

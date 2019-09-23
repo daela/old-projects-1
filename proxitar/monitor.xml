@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<rootnode>
+    <settings>
+        <weburl>http://app001.eu1.darkfallonline.com/sf/fwd?</weburl>
+        <user>YOUR_ACCOUNT_USERNAME_GOES_HERE</user>
+        <password>YOUR_PASSWORD_GOES_HERE</password>
+        <sessionfile>session.xml</sessionfile>
+        <seenfile>seen.xml</seenfile>
+        <bankautoclosedelay>300</bankautoclosedelay>
+    </settings>
+    <admin>
+        <name>jonahveil</name>
+        <name>nacitar</name>
+        <name>these_are_names_in_ventrilo_or_mumble</name>
+    </admin>
+    <allyclan />
+    <allyplayer />
+    <ignoreclan />
+    <ignoreplayer />
+    <ignoreholding />
+</rootnode>

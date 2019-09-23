@@ -1,0 +1,63 @@
+algorithm
+	defarray integer:values[4,4];
+	defarray integer:onedee[4];
+	defvar integer:i;
+	defvar integer:j;
+	defvar integer:count;
+	defvar boolean:success;
+begin
+	assign 1 to count;
+	assign 1 to i;
+	write("Setting 2D values...");
+	while i < 5 do
+		assign 1 to j;
+		while j < 5 do
+			write("     values[",i,",",j,"] = ",count);
+			assign count to values[i,j];
+			assign count+1 to count;
+			assign j+1 to j;
+		endwhile;
+		assign i+1 to i;
+	endwhile;
+	assign 1 to count;
+	assign 1 to i;
+	assign true to success;
+	write("Checking 2D values... (should read 1-16)");
+	while i < 5 do
+		assign 1 to j;
+		while j < 5 do
+			if (values[i,j] != count) then
+				write("     values[",i,",",j,"] is set incorrectly.");
+				assign false to success;
+			else
+				write("     values[",i,",",j,"] is correct: ",count);
+			endif;
+			assign count+1 to count;
+			assign j+1 to j;
+		endwhile;
+		assign i+1 to i;
+	endwhile;
+	assign 1 to i;
+	assign 1 to count;
+	write("Setting 1D values...");
+	while i < 5 do
+		write("     onedee[",i,"] = ",count);
+		assign count to onedee[i];
+		assign count+1 to count;
+		assign i+1 to i;
+	endwhile;
+	assign 1 to count;
+	assign 1 to i;
+	write("Checking 1D values... (should read 1-4)");
+	while i < 5 do
+		if (onedee[i] != count) then
+			write("     onedee[",i,"] is set incorrectly.");
+			assign false to success;
+		else
+			write("     onedee[",i,"] is correct: ",count);
+		endif;
+		assign count+1 to count;
+		assign i+1 to i;
+	endwhile;
+	write("Overall success: ",success);
+endalg

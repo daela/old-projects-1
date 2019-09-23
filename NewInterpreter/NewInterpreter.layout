@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\..\..\..\..\Codebase\container\DFA.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="556" topLine="0" />
+	</File>
+	<File name="..\..\..\..\..\Codebase\container\DFA.hpp" open="1" top="0" tabpos="2">
+		<Cursor position="1833" topLine="49" />
+	</File>
+	<File name="..\..\..\..\..\Codebase\nxFile.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="23" topLine="0" />
+	</File>
+	<File name="..\..\..\..\..\Codebase\nxFile.hpp" open="1" top="1" tabpos="4">
+		<Cursor position="362" topLine="9" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="4205" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

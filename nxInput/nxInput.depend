@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1232688339 source:z:\development\projects\nxinput\nxrawinputdevice.cpp
+	"nxRawInputDevice.hpp"
+	"nxLog.hpp"
+
+1232688562 z:\development\projects\nxinput\nxrawinputdevice.hpp
+	"nxCommon.hpp"
+	<string>
+	<vector>
+
+1232687677 z:\development\projects\nxinput\nxcommon.hpp
+	<windows.h>
+	<limits.h>
+	<stdexcept>
+	<string>
+	<boost/config.hpp>
+	<boost/current_function.hpp>
+	<boost/interprocess/sync/interprocess_recursive_mutex.hpp>
+	<boost/interprocess/sync/scoped_lock.hpp>
+	<boost/cstdint.hpp>
+
+1232688318 source:z:\development\projects\nxinput\nxthread.cpp
+	"nxThread.hpp"
+
+1232688568 z:\development\projects\nxinput\nxthread.hpp
+	"nxCommon.hpp"
+
+1232687893 source:z:\development\projects\nxinput\nxutility.cpp
+	"nxUtility.hpp"
+	<sstream>
+	<iomanip>
+
+1232687910 z:\development\projects\nxinput\nxutility.hpp
+	"nxCommon.hpp"
+	<map>
+
+1232688632 source:z:\development\projects\nxinput\nxinputmanager.cpp
+	"nxInputManager.hpp"
+	"nxLog.hpp"
+
+1232688535 z:\development\projects\nxinput\nxinputmanager.hpp
+	"nxCommon.hpp"
+	"nxXInputDevice.hpp"
+	"nxRawInputDevice.hpp"
+	"nxUtility.hpp"
+	"nxThread.hpp"
+	<string>
+	<sstream>
+	<map>
+	<vector>
+	<iomanip>
+	<DInput.h>
+	<set>
+
+1232688577 z:\development\projects\nxinput\nxxinputdevice.hpp
+	"nxCommon.hpp"
+	<XInput.h>
+	<sstream>
+	<iomanip>
+
+1232688255 source:z:\development\projects\nxinput\nxxinputdevice.cpp
+	"nxXInputDevice.hpp"
+
+1266198734 source:z:\development\projects\nxinput\main.cpp
+	"nxCommon.hpp"
+	"nxUtility.hpp"
+	"nxRawInputDevice.hpp"
+	"nxThread.hpp"
+	"nxLexer.hpp"
+	"nxInputManager.hpp"
+	"nxIteratedFile.hpp"
+	<sstream>
+	<iostream>
+	<iomanip>
+	<memory>
+	<map>
+	<XInput.h>
+	<DInput.h>
+	<XIMCore.h>
+	<list>
+	<stack>
+
+1231910897 source:z:\development\projects\nxinput\nxlexer.cpp
+	"nxLexer.hpp"
+
+1232512365 z:\development\projects\nxinput\nxlexer.hpp
+	<map>
+	<set>
+	<string>
+	<iostream>
+
+1232686603 source:z:\development\projects\nxinput\nxiteratedfile.cpp
+	"nxIteratedFile.hpp"
+
+1232686523 z:\development\projects\nxinput\nxiteratedfile.hpp
+	<fstream>
+	"nxUtility.hpp"
+
+1232687085 source:z:\development\projects\nxinput\nxcommon.cpp
+	"nxCommon.hpp"
+	<unistd.h>
+	<cctype>
+
+1233553762 z:\development\projects\nxinput\nxlog.hpp
+	"nxCommon.hpp"
+	<boost/interprocess/sync/interprocess_recursive_mutex.hpp>
+	<boost/interprocess/sync/scoped_lock.hpp>
+	<iostream>
+
+1233553739 source:z:\development\projects\nxinput\nxlog.cpp
+	"nxLog.hpp"
+	<string>
+	<fstream>
+	<sstream>
+

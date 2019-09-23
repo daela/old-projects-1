@@ -1,0 +1,234 @@
+Tape Input (q to quit): 0
+========== Performing '+' operation ==========
+_q0_0
+1_q1_
+_q2_1
+_q3_
+
+Result:
+
+
+========== Performing '>=' Operation ==========
+_q0_0
+0_q5_
+_q7_0
+
+TRUE
+
+Tape Input (q to quit): 10
+========== Performing '+' operation ==========
+_q0_10
+1_q0_0
+11_q1_
+1_q2_1
+1_q3_
+
+Result: 1
+
+
+========== Performing '>=' Operation ==========
+_q0_10
+a_q1_0
+a0_q2_
+a_q7_0
+
+TRUE
+
+Tape Input (q to quit): 101
+========== Performing '+' operation ==========
+_q0_101
+1_q0_01
+11_q1_1
+111_q1_
+11_q2_1
+11_q3_
+
+Result: 11
+
+
+========== Performing '>=' Operation ==========
+_q0_101
+a_q1_01
+a0_q2_1
+a_q3_0b
+_q4_a0b
+a_q0_0b
+a0_q5_b
+a0b_q5_
+a0_q7_b
+
+TRUE
+
+Tape Input (q to quit): 1011
+========== Performing '+' operation ==========
+_q0_1011
+1_q0_011
+11_q1_11
+111_q1_1
+1111_q1_
+111_q2_1
+111_q3_
+
+Result: 111
+
+
+========== Performing '>=' Operation ==========
+_q0_1011
+a_q1_011
+a0_q2_11
+a_q3_0b1
+_q4_a0b1
+a_q0_0b1
+a0_q5_b1
+a0b_q5_1
+a0bb_q6_
+
+FALSE
+
+Tape Input (q to quit): 01
+========== Performing '+' operation ==========
+_q0_01
+1_q1_1
+11_q1_
+1_q2_1
+1_q3_
+
+Result: 1
+
+
+========== Performing '>=' Operation ==========
+_q0_01
+0_q5_1
+0b_q6_
+
+FALSE
+
+Tape Input (q to quit): 011
+========== Performing '+' operation ==========
+_q0_011
+1_q1_11
+11_q1_1
+111_q1_
+11_q2_1
+11_q3_
+
+Result: 11
+
+
+========== Performing '>=' Operation ==========
+_q0_011
+0_q5_11
+0b_q6_1
+
+FALSE
+
+Tape Input (q to quit): 111111011111
+========== Performing '+' operation ==========
+_q0_111111011111
+1_q0_11111011111
+11_q0_1111011111
+111_q0_111011111
+1111_q0_11011111
+11111_q0_1011111
+111111_q0_011111
+1111111_q1_11111
+11111111_q1_1111
+111111111_q1_111
+1111111111_q1_11
+11111111111_q1_1
+111111111111_q1_
+11111111111_q2_1
+11111111111_q3_
+
+Result: 11111111111
+
+
+========== Performing '>=' Operation ==========
+_q0_111111011111
+a_q1_11111011111
+a1_q1_1111011111
+a11_q1_111011111
+a111_q1_11011111
+a1111_q1_1011111
+a11111_q1_011111
+a111110_q2_11111
+a11111_q3_0b1111
+a1111_q4_10b1111
+a111_q4_110b1111
+a11_q4_1110b1111
+a1_q4_11110b1111
+a_q4_111110b1111
+_q4_a111110b1111
+a_q0_111110b1111
+aa_q1_11110b1111
+aa1_q1_1110b1111
+aa11_q1_110b1111
+aa111_q1_10b1111
+aa1111_q1_0b1111
+aa11110_q2_b1111
+aa11110b_q2_1111
+aa11110_q3_bb111
+aa1111_q3_0bb111
+aa111_q4_10bb111
+aa11_q4_110bb111
+aa1_q4_1110bb111
+aa_q4_11110bb111
+a_q4_a11110bb111
+aa_q0_11110bb111
+aaa_q1_1110bb111
+aaa1_q1_110bb111
+aaa11_q1_10bb111
+aaa111_q1_0bb111
+aaa1110_q2_bb111
+aaa1110b_q2_b111
+aaa1110bb_q2_111
+aaa1110b_q3_bb11
+aaa1110_q3_bbb11
+aaa111_q3_0bbb11
+aaa11_q4_10bbb11
+aaa1_q4_110bbb11
+aaa_q4_1110bbb11
+aa_q4_a1110bbb11
+aaa_q0_1110bbb11
+aaaa_q1_110bbb11
+aaaa1_q1_10bbb11
+aaaa11_q1_0bbb11
+aaaa110_q2_bbb11
+aaaa110b_q2_bb11
+aaaa110bb_q2_b11
+aaaa110bbb_q2_11
+aaaa110bb_q3_bb1
+aaaa110b_q3_bbb1
+aaaa110_q3_bbbb1
+aaaa11_q3_0bbbb1
+aaaa1_q4_10bbbb1
+aaaa_q4_110bbbb1
+aaa_q4_a110bbbb1
+aaaa_q0_110bbbb1
+aaaaa_q1_10bbbb1
+aaaaa1_q1_0bbbb1
+aaaaa10_q2_bbbb1
+aaaaa10b_q2_bbb1
+aaaaa10bb_q2_bb1
+aaaaa10bbb_q2_b1
+aaaaa10bbbb_q2_1
+aaaaa10bbb_q3_bb
+aaaaa10bb_q3_bbb
+aaaaa10b_q3_bbbb
+aaaaa10_q3_bbbbb
+aaaaa1_q3_0bbbbb
+aaaaa_q4_10bbbbb
+aaaa_q4_a10bbbbb
+aaaaa_q0_10bbbbb
+aaaaaa_q1_0bbbbb
+aaaaaa0_q2_bbbbb
+aaaaaa0b_q2_bbbb
+aaaaaa0bb_q2_bbb
+aaaaaa0bbb_q2_bb
+aaaaaa0bbbb_q2_b
+aaaaaa0bbbbb_q2_
+aaaaaa0bbbb_q7_b
+
+TRUE
+
+Tape Input (q to quit): q

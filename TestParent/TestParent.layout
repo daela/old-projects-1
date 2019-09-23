@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="8865" topLine="243" />
+	</File>
+	<File name="..\include\nac\DllHook.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="4588" topLine="105" />
+	</File>
+	<File name="..\include\nac\DllHook.h" open="1" top="0" tabpos="2">
+		<Cursor position="2667" topLine="57" />
+	</File>
+	<File name="..\include\nac\ImportAddressTable.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="5139" topLine="0" />
+	</File>
+	<File name="..\include\nac\ImportAddressTable.h" open="0" top="0" tabpos="3">
+		<Cursor position="2004" topLine="27" />
+	</File>
+	<File name="..\include\nac\Process.h" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

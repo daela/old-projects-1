@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1228373776 source:z:\gn\dev\portable\projects\xbinput\main.cpp
+	<windows.h>
+	<string>
+	<sstream>
+	<vector>
+	<map>
+	<stdexcept>
+	<wchar.h>
+	<iostream>
+
+1230026258 source:z:\development\projects\xbinput\main.cpp
+	"nxCommon.hpp"
+	"nxUtility.hpp"
+	"nxRawInputDevice.hpp"
+	"nxThread.hpp"
+	"nxInputHandler.hpp"
+	<sstream>
+	<iostream>
+	<iomanip>
+	<memory>
+	<map>
+	<XInput.h>
+	<DInput.h>
+
+1229576112 source:z:\development\projects\xbinput\nxrawinputdevice.cpp
+	"nxRawInputDevice.hpp"
+
+1229649243 z:\development\projects\xbinput\nxrawinputdevice.hpp
+	<string>
+	<vector>
+	"nxCommon.hpp"
+
+1229922773 z:\development\projects\xbinput\nxcommon.hpp
+	<stdexcept>
+	<iostream>
+	<windows.h>
+
+1228788489 source:z:\development\projects\xbinput\nxthread.cpp
+	"nxThread.hpp"
+
+1228788400 z:\development\projects\xbinput\nxthread.hpp
+	<windows.h>
+
+1230363016 source:z:\development\projects\xbinput\nxutility.cpp
+	"nxUtility.hpp"
+
+1229756946 z:\development\projects\xbinput\nxutility.hpp
+	"nxCommon.hpp"
+
+1230026151 source:z:\development\projects\xbinput\nxinputhandler.cpp
+	"nxInputHandler.hpp"
+
+1230026168 z:\development\projects\xbinput\nxinputhandler.hpp
+	"nxCommon.hpp"
+	"nxRawInputDevice.hpp"
+	"nxUtility.hpp"
+	<boost/pool/singleton_pool.hpp>
+	<map>
+	<string>
+	<sstream>
+	<iomanip>
+	<boost/scoped_array.hpp>
+	<dinput.h>
+	<XInput.h>
+

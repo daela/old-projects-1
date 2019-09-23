@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1217271594 source:d:\gn\dev\portable\projects\nconquer2\madchook.cpp
+	"madCHook.hpp"
+
+1217271622 d:\gn\dev\portable\projects\nconquer2\madchook.hpp
+	<string>
+	<windows.h>
+
+1217271594 source:d:\gn\dev\portable\projects\nconquer\madchook.cpp
+	"madCHook.hpp"
+
+1217271622 d:\gn\dev\portable\projects\nconquer\madchook.hpp
+	<string>
+	<windows.h>
+
+1217431816 source:d:\gn\dev\portable\projects\nconquer\ninject.cpp
+	<windows.h>
+	<Tlhelp32.h>
+	<iostream>
+	<string>
+	<sstream>
+	"madCHook.hpp"
+
+1217395010 d:\gn\dev\portable\projects\nconquer\dinputtest.hpp
+	<windows.h>
+	<dinput.h>
+
+1003243894 d:\gn\dev\portable\applications\libraries\dx81\include\dinput.h
+	<objbase.h>
+

@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1204696457 source:d:\gn\dev\portable\projects\costats\coitemtype.cpp
+	"COItemType.h"
+
+1204696174 d:\gn\dev\portable\projects\costats\coitemtype.h
+	<map>
+	<vector>
+	<sstream>
+	<string>
+	"COItem.h"
+
+1204696198 d:\gn\dev\portable\projects\costats\coitem.h
+	<string>
+	<fstream>
+	<sstream>
+	"COStats.h"
+
+1204701715 d:\gn\dev\portable\projects\costats\costats.h
+
+1204701709 source:d:\gn\dev\portable\projects\costats\costats.cpp
+	"COStats.h"
+
+1204787756 source:d:\gn\dev\portable\projects\costats\main.cpp
+	<map>
+	<vector>
+	<fstream>
+	<iostream>
+	<string>
+	<sstream>
+	<algorithm>
+	"COItemType.h"
+	"COItem.h"
+	"COItemAdd.h"
+
+1204789412 source:d:\gn\dev\portable\projects\costats\coitem.cpp
+	"COItem.h"
+
+1204700390 source:d:\gn\dev\portable\projects\costats\coitemadd.cpp
+	"COItemAdd.h"
+
+1204700370 d:\gn\dev\portable\projects\costats\coitemadd.h
+	<map>
+	<fstream>
+	<string>
+	"COStats.h"
+
+1204700390 source:c:\portable\projects\costats\coitemadd.cpp
+	"COItemAdd.h"
+
+1204700370 c:\portable\projects\costats\coitemadd.h
+	<map>
+	<fstream>
+	<string>
+	"COStats.h"
+
+1204701715 c:\portable\projects\costats\costats.h
+
+1204696457 source:c:\portable\projects\costats\coitemtype.cpp
+	"COItemType.h"
+
+1204696174 c:\portable\projects\costats\coitemtype.h
+	<map>
+	<vector>
+	<sstream>
+	<string>
+	"COItem.h"
+
+1204696198 c:\portable\projects\costats\coitem.h
+	<string>
+	<fstream>
+	<sstream>
+	"COStats.h"
+
+1204701709 source:c:\portable\projects\costats\costats.cpp
+	"COStats.h"
+
+1204698736 source:c:\portable\projects\costats\coitem.cpp
+	"COItem.h"
+

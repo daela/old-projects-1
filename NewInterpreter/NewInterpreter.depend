@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1219722154 source:d:\gn\dev\portable\projects\newinterpreter\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<set>
+	<map>
+	<iterator>
+	<container/DFA.hpp>
+	<nxFile.hpp>
+
+1219761316 source:d:\codebase\container\dfa.cpp
+	"DFA.hpp"
+
+1219762385 d:\codebase\container\dfa.hpp
+	<map>
+	<list>
+	<string>
+
+1219115434 source:d:\codebase\nxfile.cpp
+	"nxFile.hpp"
+
+1219115687 d:\codebase\nxfile.hpp
+	<fstream>
+

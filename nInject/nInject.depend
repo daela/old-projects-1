@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1217271594 source:d:\game\include\win32\madchook.cpp
+	"madCHook.hpp"
+
+1217271622 d:\game\include\win32\madchook.hpp
+	<string>
+	<windows.h>
+
+1217284895 source:d:\gn\dev\portable\projects\ninject\main.cpp
+	<windows.h>
+	<Tlhelp32.h>
+	<win32/madCHook.hpp>
+	<iostream>
+	<string>
+	<sstream>
+

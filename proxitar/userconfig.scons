@@ -1,0 +1,39 @@
+ # vi:set syntax=python:
+Import('env_t')
+
+# --- define locations for libraries
+env_t['libraries'].update({
+	'nx':
+	{
+		'CPPPATH': [ env_t['scommon_path']+'include' ],
+		'LIBPATH': [ env_t['scommon_path']+'lib' ]
+	},
+	'boost':
+	{
+		'CPPPATH': [ env_t['scommon_path']+'boost' ],
+		'LIBPATH': [ env_t['scommon_path']+'boost/stage/lib' ]
+	},
+	'gpt':
+	{
+		'CCPATH': [ env_t['scommon_path']+'gpt/stage/include' ],
+		'LIBPATH': [ env_t['scommon_path']+'gpt/stage/lib' ]
+	},
+	'cryptopp':
+	{
+		'CPPPATH': [ env_t['scommon_path']+'cryptopp' ],
+		'LIBPATH': [ env_t['scommon_path']+'cryptopp' ]
+	},
+	# --- curl stuff common to all platforms (assumes it is installed on system)
+	'curl':
+	{
+		'CPPDEFINES': [ 'CURL_STATICLIB' ],
+		'LIBS': [ 'curl','ssh2','z','crypto','ssl','idn' ] 
+	}
+})
+
+if env_t['cross'] == 'win':
+	# --- we included pre-compiled windows packages + headers, add the location
+	env_t['libraries']['curl']['CPPPATH'] = [ env_t['scommon_path']+'curl/win32/include' ]
+	env_t['libraries']['curl']['LIBPATH'] = [ env_t['scommon_path']+'curl/win32/lib' ]
+	# --- windows also needs two additional libs
+	env_t['libraries']['curl']['LIBS'].append( [ 'eay32', 'ssl32' ] )

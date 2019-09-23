@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1218156236 source:d:\gn\dev\portable\projects\ninterpreter\dfa.cpp
+	"DFA.h"
+
+1173086746 d:\gn\dev\portable\projects\ninterpreter\dfa.h
+	<set>
+	<string>
+	<fstream>
+	"IOHandler.h"
+
+1173086764 d:\gn\dev\portable\projects\ninterpreter\iohandler.h
+	<fstream>
+	<string>
+
+1218156705 source:d:\gn\dev\portable\projects\ninterpreter\datavalue.cpp
+	"DataValue.h"
+
+1218156700 d:\gn\dev\portable\projects\ninterpreter\datavalue.h
+	<iostream>
+	<string>
+
+1176275724 source:d:\gn\dev\portable\projects\ninterpreter\executer.cpp
+	"Executer.h"
+
+1176271183 d:\gn\dev\portable\projects\ninterpreter\executer.h
+	"SymbolTable.h"
+	"DataValue.h"
+	"Token.h"
+	<iostream>
+	<vector>
+	<conio.h>
+
+1176270610 d:\gn\dev\portable\projects\ninterpreter\symboltable.h
+	"Token.h"
+	"DataValue.h"
+	<vector>
+	<string>
+	<algorithm>
+	<iomanip>
+
+1173086809 d:\gn\dev\portable\projects\ninterpreter\token.h
+	"DataValue.h"
+	<string>
+	<set>
+	<list>
+
+1173086846 source:d:\gn\dev\portable\projects\ninterpreter\iohandler.cpp
+	"IOHandler.h"
+
+1176275237 source:d:\gn\dev\portable\projects\ninterpreter\lexer.cpp
+	"Lexer.h"
+
+1173086774 d:\gn\dev\portable\projects\ninterpreter\lexer.h
+	"DFA.h"
+	"IOHandler.h"
+	<iostream>
+	<algorithm>
+	"Token.h"
+
+1173086873 source:d:\gn\dev\portable\projects\ninterpreter\parseerror.cpp
+	"ParseError.h"
+
+1173086784 d:\gn\dev\portable\projects\ninterpreter\parseerror.h
+	<string>
+	<sstream>
+	"Token.h"
+
+1173087604 source:d:\gn\dev\portable\projects\ninterpreter\parser.cpp
+	"Parser.h"
+
+1173087614 d:\gn\dev\portable\projects\ninterpreter\parser.h
+	"Lexer.h"
+	"ParseError.h"
+	"SymbolTable.h"
+
+1218156766 source:d:\gn\dev\portable\projects\ninterpreter\symboltable.cpp
+	"SymbolTable.h"
+
+1173086895 source:d:\gn\dev\portable\projects\ninterpreter\token.cpp
+	"Token.h"
+
+1218156786 source:d:\gn\dev\portable\projects\ninterpreter\main.cpp
+	"Token.h"
+	"DataValue.h"
+	"DFA.h"
+	"Lexer.h"
+	"Parser.h"
+	"Executer.h"
+	<iostream>
+	<string>
+

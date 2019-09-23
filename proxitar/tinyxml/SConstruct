@@ -1,0 +1,13 @@
+# vi:set syntax=python:
+
+# --- import the template environment
+SConscript('../SCommon')
+Import('env_t')
+
+# --- generate help text for the options
+Help(env_t['cmdvars'].GenerateHelpText(env_t))
+
+env = env_t.Clone()
+
+# --- start the build
+SConscript('SConscript', exports='env')

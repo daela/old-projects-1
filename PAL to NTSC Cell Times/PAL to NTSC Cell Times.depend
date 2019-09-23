@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1216249025 source:d:\gn\dev\portable\projects\pal to ntsc cell times\main.cpp
+	<fstream>
+	<iostream>
+	<string>
+

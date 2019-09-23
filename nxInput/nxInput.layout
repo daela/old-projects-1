@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="8577" topLine="219" />
+	</File>
+	<File name="nxCommon.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="nxCommon.hpp" open="0" top="0" tabpos="4">
+		<Cursor position="1920" topLine="0" />
+	</File>
+	<File name="nxInputManager.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="6983" topLine="615" />
+	</File>
+	<File name="nxInputManager.hpp" open="1" top="0" tabpos="6">
+		<Cursor position="7868" topLine="188" />
+	</File>
+	<File name="nxIteratedFile.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="553" topLine="0" />
+	</File>
+	<File name="nxIteratedFile.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="4438" topLine="0" />
+	</File>
+	<File name="nxLexer.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="443" topLine="0" />
+	</File>
+	<File name="nxLexer.hpp" open="1" top="0" tabpos="2">
+		<Cursor position="428" topLine="57" />
+	</File>
+	<File name="nxLog.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="19" topLine="0" />
+	</File>
+	<File name="nxLog.hpp" open="1" top="0" tabpos="4">
+		<Cursor position="4339" topLine="0" />
+	</File>
+	<File name="nxRawInputDevice.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="nxRawInputDevice.hpp" open="0" top="0" tabpos="8">
+		<Cursor position="133" topLine="0" />
+	</File>
+	<File name="nxThread.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="53" topLine="0" />
+	</File>
+	<File name="nxThread.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="119" topLine="0" />
+	</File>
+	<File name="nxUtility.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="64" topLine="0" />
+	</File>
+	<File name="nxUtility.hpp" open="0" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="nxXInputDevice.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="nxXInputDevice.hpp" open="0" top="0" tabpos="2">
+		<Cursor position="131" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

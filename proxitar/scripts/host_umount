@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $UID -eq 0 ]]; then
+	echo "$0 must NOT be run as root"
+	exit 1
+fi
+
+echo "You may be asked for the root password."
+sudo umount "$HOME/host"

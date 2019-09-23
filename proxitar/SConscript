@@ -1,0 +1,50 @@
+# vi:set syntax=python:
+Import('env')
+
+# --- imports
+import sys
+
+# --- create progname from environment
+progname=env.BuildSuffix('dfweb')
+
+# --- add windows libraries
+if env['cross'] == 'win':
+	env.Append(LIBS = ['ws2_32','gdi32','wldap32','winmm','user32','gdi32'])
+else:
+        env.Append(LIBS = ['rt','pthread'])
+	conf = Configure(env);
+	if not conf.CheckCHeader(['curl/curl.h']):
+		print ''
+		print 'ERROR: curl/curl.h NOT DETECTED!'
+		print '- For linux builds, the system must have a curl development package.'
+		print '- A build of curl is bundled only for windows builds.'
+		sys.exit(1)
+	conf.Finish();
+
+SConscript('tinyxml/SConscript', exports=['env'])
+
+# --- enumerate our files
+files=[
+	'src/thread.cpp',
+	'src/sync.cpp',
+	'src/time.cpp',
+	'src/common.cpp',
+	'main.cpp',
+	'sha1.cpp',
+	'df_holding.cpp',
+	'df_proximity_message.cpp',
+	'df_proximity_monitor.cpp',
+	'df_web.cpp',
+	'proxybot_common.cpp',
+	'ventrilo_chat.cpp'
+]
+
+# --- add some system libraries/platform specific files
+if env['cross'] != 'win':
+        files.append('mumble_wrapper.cpp')
+
+
+# --- build the program
+env.Program(progname, files)
+
+

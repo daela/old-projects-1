@@ -1,0 +1,275 @@
+# vi:set syntax=python:
+# requires scons 0.98+
+
+############################################
+#
+# The following command line options are available via env_t['value']
+#	cmdvars (the Variables instance that defines SCommon's command line options)
+#	debug
+#	arch
+#	profile
+#	verbose
+#	forcecolor
+#
+#	Refer to 'scons -h' for more information on these flags and their values.
+#
+# The following additional values are also available via env_t['value']
+#	colorize (True if we are colorizing output)
+#	x64 (True if building 64-bit)
+#	x86 (True if building 32-bit)
+#
+############################################
+
+import os
+import os.path
+import inspect
+import sys
+import platform
+
+# --- setup the command line options. NOTE: default specified here is just for documentation, actual defaults must be changed below where we ARGUMENTS.get()
+cmdvars=Variables()
+cmdvars.AddVariables(
+	BoolVariable('debug', 'Add "debug=1" to the command line for a debug build.  Omit this flag for a release build.', False),
+	EnumVariable('arch', 'Add arch="x86" for a 32bit build or arch="x64" for a 64bit build.  Omit this flag to build as the machine\'s native architecture, defaulting to x86 if it cannot be identified.', '', allowed_values=('x64','x86','')),
+	BoolVariable('profile', 'Add "profile=1" to build with google performance tools cpu profiler support.  This flag forces "debug=1".', False),
+	BoolVariable('verbose', 'Add "verbose=0" to build with extremely short build messages.  Omit this flag for full command line build messages.', True),
+	BoolVariable('forcecolor', 'Add "forcecolor=1" to force colorized output even if not outputting to a TTY.  Omit this flag for automatic colorization.', False),
+	EnumVariable('cross', 'Add cross="win" to build for windows.  Omit this flag to build for the machine\'s native platform.', '', allowed_values=('win','')),
+)
+
+# --- setup the template environment
+env_t=Environment(
+	variables=cmdvars,
+	ENV = {
+		'PATH' : os.environ['PATH'],
+		'TERM' : os.environ['TERM'],
+		'HOME' : os.environ['HOME']
+	}
+)
+
+# --- store the cmdvars within the environment itself
+env_t['cmdvars']=cmdvars
+# --- initialize library list 
+env_t['libraries']={}
+
+# ---add a scons extension to handle batches of flags
+def AddLibraryPath( env, val ):
+	global libraries
+	# use extended call syntax, **
+	env.Append(**env_t['libraries'].get(val,{}))
+        return
+env_t.AddMethod(AddLibraryPath, "AddLibraryPath")
+
+# --- define custom configure test extensions
+def CustomCheckCXXFLAG(context,flag):
+	# print message
+	context.Message("Checking for CXXFLAG "+flag+"... ")
+
+	# backup original flags then add the flag
+	lastCXXFLAGS=context.env['CXXFLAGS']
+	context.env.Append(CXXFLAGS=flag)
+
+	# compile an empty .cpp file with this flag to see if the compiler barks about it
+	result=context.TryCompile('','.cpp')
+
+	# restore flags
+	context.env.Replace(CXXFLAGS=lastCXXFLAGS)
+
+	# print and return result
+	context.Result(result)
+	return result
+
+# --- define a method to provide us with a configure context that includes our custom tests
+def CustomConfigureEx(env):
+	return env.Configure(custom_tests={'CheckCXXFLAG':CustomCheckCXXFLAG})
+
+# --- add this method to the environment itself for convenience
+env_t.AddMethod(CustomConfigureEx,"ConfigureEx")
+
+# --- helper function, adds a directory separator to the end of a directory name if it is not already present.
+def SuffixDirName(name):
+	if name[-len(os.sep):] != os.sep:
+		return name + os.sep
+	return name
+
+# --- store the path to where this sconstruct lives, appending a separator if necessary
+env_t['scommon_path'] = SuffixDirName(os.path.dirname(inspect.currentframe().f_code.co_filename))
+
+# --- enable/disable colorization
+env_t['colorize']=env_t['forcecolor'] or sys.stdout.isatty()
+env_t['ENV']['CGCC_FORCE_COLOR']=str(int(env_t['colorize']))
+
+# --- if no arch specified, determine it automatically
+if env_t['arch'] == '':
+	env_t['arch'] = { 'x86_64' : 'x64' }.get(platform.machine(),'x86')
+	
+# --- set lazier flags for those who don't want to check arch.
+env_t['x64'] = (env_t['arch'] == 'x64')
+env_t['x86'] = (env_t['arch'] == 'x86')
+
+# --- set flags for profiling support
+if env_t['profile']:
+	# force debug build if profiling
+	env_t['debug']=True
+	env_t.Append(CPPDEFINES=['GOOGLE_PROFILE=1'])
+	env_t.Append(LIBS = ['profiler'])
+
+# --- set flags for debug/release
+if env_t['debug']:
+	env_t.Append(CPPDEFINES=['__func__=__PRETTY_FUNCTION__'])
+	env_t.Append(CPPDEFINES=['DEBUG=1', '_DEBUG=1'])
+	env_t.Append(CCFLAGS=['-O0','-fno-inline'])
+else:
+	env_t.Append(CPPDEFINES=['NDEBUG'])
+	env_t.Append(CCFLAGS=['-O2'])
+
+def check_prefix(prefix_list):
+	for prefix in prefix_list:
+		if env_t.WhereIs(prefix+'gcc') != None:
+			return prefix
+	return None
+# --- set cross compiler if needed
+if env_t['cross'] == 'win':
+	# --- set it to use mingw, preferring the ones based on mingw w64
+	if not env_t['x64']:
+		prefix_list=( 'i686-w64-mingw32-', 'i686-pc-mingw32-', 'i586-mingw32msvc-' )
+	else:
+		prefix_list= ( 'x86_64-w64-mingw32-', 'x86_64-pc-mingw32' )
+	prefix=check_prefix(prefix_list)
+	if prefix == None:
+		raise Exception, "ERROR: Couldn't find your cross compiler!"
+	env_t.Replace(CXX=prefix+'g++')
+	env_t.Replace(CC=prefix+'gcc')
+	env_t.Replace(AR=prefix+'ar')
+	env_t.Replace(AS=prefix+'as')
+	env_t.Replace(RANLIB=prefix+'ranlib')
+	env_t.Replace(RC=prefix+'windres')
+	env_t.Replace(LD=prefix+'ld')
+	env_t.Replace(NM=prefix+'nm')
+	env_t.Replace(STRIP=prefix+'strip')
+	env_t.Replace(DLLTOOL=prefix+'dlltool')
+	env_t.Replace(OBJDUMP=prefix+'objdump')
+else:
+	# --- if we aren't cross compiling, we want to use -fPIC
+	env_t.Append(CCFLAGS=['-fPIC'])
+
+# --- set flags for x86 or x64 build
+if env_t['x64']:
+	env_t.Append(CCFLAGS=['-m64'])
+	env_t.Append(LINKFLAGS=['-m64'])
+	env_t.Append(CCFLAGS=['-march=x86-64'])
+else:
+	env_t.Append(CCFLAGS=['-m32'])
+	env_t.Append(LINKFLAGS=['-m32'])
+	# by default, target pentium4... the caller can add an additional -march= to change it to something else
+	env_t.Append(CCFLAGS=['-march=pentium4'])
+
+
+# --- create a string based on our build options
+env_t['buildstr'] = ''
+
+if env_t['cross'] == 'win':
+	env_t['buildstr'] += 'win'
+else:
+	env_t['buildstr'] += 'lin'
+
+if env_t['x64']:
+	env_t['buildstr'] += '64'
+else:
+	env_t['buildstr'] += '32'
+
+if env_t['debug']:
+	env_t['buildstr'] += 'd'
+
+# --- add a method to add a build suffix to a given name.  we can't add this to progsuffix/etc, because then scons
+# --- doesn't detect changes properly in dependant sconscripts 
+def CustomBuildSuffix(env,name):
+	return name + '_' + env['buildstr']
+
+# --- add this method to the environment itself for convenience
+env_t.AddMethod(CustomBuildSuffix,"BuildSuffix")
+
+# --- set our suffixes/prefixes, and make our obj files have unique names so our builds can live together
+env_t['OBJSUFFIX'] = env_t.BuildSuffix('') + '.o'
+
+env_t['LIBPREFIX'] = 'lib'
+env_t['LIBSUFFIX'] = '.a'
+if env_t['cross'] == 'win':
+	env_t['PROGSUFFIX'] += '.exe'
+	env_t['SHLIBSUFFIX'] += '.dll'
+else:
+	env_t['PROGSUFFIX'] = ''
+	env_t['SHLIBSUFFIX'] += '.so'
+
+# --- add common compiler flags
+env_t.Append(CCFLAGS=['-Wall','-Wno-unused-function'])
+
+# --- we want debug symbols, even in release builds
+env_t.Append(CCFLAGS=['-g'])
+
+
+# --- enable stdc++0x if it's avilable
+conf=env_t.ConfigureEx()
+if conf.CheckCXXFLAG('-std=c++0x'):
+	env_t.Append(CXXFLAGS=['-std=c++0x'])
+	env_t.Append(LINKFLAGS=['-std=c++0x'])
+conf.Finish()
+
+# --- set flags for output verbosity
+if not env_t['verbose']: 
+	# -- use simpler, colored messages if we don't want verbose output
+	colors = {}
+	colors['cyan']   = '\033[96m'
+	colors['purple'] = '\033[95m'
+	colors['blue']   = '\033[94m'
+	colors['green']  = '\033[92m'
+	colors['yellow'] = '\033[93m'
+	colors['red']    = '\033[91m'
+	colors['end']    = '\033[0m'
+
+	# If the output is not a terminal, remove the colors
+	if not env_t['colorize']:
+		for key, value in colors.iteritems():
+			colors[key] = ''
+
+	compile_source_message = '%sCompiling %s==> %s$SOURCE%s' % \
+	   (colors['blue'], colors['purple'], colors['green'], colors['end'])
+
+	compile_shared_source_message = '%sCompiling shared %s==> %s$SOURCE%s' % \
+	   (colors['blue'], colors['purple'], colors['green'], colors['end'])
+
+	link_program_message = '%sLinking Program %s==> %s$TARGET%s' % \
+	   (colors['red'], colors['purple'], colors['green'], colors['end'])
+
+	link_library_message = '%sLinking Static Library %s==> %s$TARGET%s' % \
+	   (colors['red'], colors['purple'], colors['green'], colors['end'])
+
+	ranlib_library_message = '%sRanlib Library %s==> %s$TARGET%s' % \
+	   (colors['red'], colors['purple'], colors['green'], colors['end'])
+
+	link_shared_library_message = '%sLinking Shared Library %s==> %s$TARGET%s' % \
+	   (colors['red'], colors['purple'], colors['green'], colors['end'])
+
+	java_library_message = '%sCreating Java Archive %s==> %s$TARGET%s' % \
+	   (colors['red'], colors['purple'], colors['green'], colors['end'])
+
+	env_t.Replace(
+	  CXXCOMSTR = compile_source_message,
+	  CCCOMSTR = compile_source_message,
+	  SHCCCOMSTR = compile_shared_source_message,
+	  SHCXXCOMSTR = compile_shared_source_message,
+	  ARCOMSTR = link_library_message,
+	  RANLIBCOMSTR = ranlib_library_message,
+	  SHLINKCOMSTR = link_shared_library_message,
+	  LINKCOMSTR = link_program_message,
+	  JARCOMSTR = java_library_message,
+	  JAVACCOMSTR = compile_source_message
+	)
+
+# --- export variables
+Export('env_t')
+
+# --- allow user configurable additions
+SConscript(os.path.join(env_t['scommon_path'],'userconfig.scons'))
+
+

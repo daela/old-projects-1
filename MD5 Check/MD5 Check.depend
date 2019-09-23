@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1218848429 source:d:\gn\dev\portable\projects\md5 check\main.cpp
+	<windows.h>
+	<string>
+	<set>
+	<queue>
+	<iostream>
+
+1202004135 source:d:\codebase\md5.cpp
+	<assert.h>
+	<memory.h>
+	<stdio.h>
+	<string.h>
+	"md5.h"
+
+1202414218 d:\codebase\md5.h
+
+1227480096 source:z:\gn\dev\portable\projects\md5 check\main.cpp
+	<windows.h>
+	<string>
+	<set>
+	<queue>
+	<iostream>
+	"z:/Codebase/md5.h"
+	<fstream>
+
+1202410618 z:\codebase\md5.h
+
+1202000535 source:z:\codebase\md5.cpp
+	<assert.h>
+	<memory.h>
+	<stdio.h>
+	<string.h>
+	"md5.h"
+
+1233197379 source:z:\development\projects\md5 check\main.cpp
+	<windows.h>
+	<string>
+	<set>
+	<queue>
+	<iostream>
+	<fstream>
+	"md5.h"
+	"md5.cpp"
+
+1202410618 z:\development\projects\md5 check\md5.h
+
+1202000535 z:\development\projects\md5 check\md5.cpp
+	<assert.h>
+	<memory.h>
+	<stdio.h>
+	<string.h>
+	"md5.h"
+

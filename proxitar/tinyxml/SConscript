@@ -1,0 +1,32 @@
+# vi:set syntax=python:
+Import('env')
+
+# --- imports
+import os
+import inspect
+
+# --- store the path to this file
+filepath=os.path.dirname(inspect.currentframe().f_code.co_filename)
+
+# --- create libname from environment
+libname=env.BuildSuffix('tinyxml')
+
+# --- let tinyxml use stl
+env.Append(CPPDEFINES = ['TIXML_USE_STL'])
+
+# --- build the program
+env.StaticLibrary(libname, [
+	'tinyxml/tinystr.cpp',
+	'tinyxml/tinyxml.cpp',
+	'tinyxml/tinyxmlerror.cpp',
+	'tinyxml/tinyxmlparser.cpp'
+])
+
+# --- add the lib to the linker's list, for the parent, and set the relevant paths as well
+env.Prepend(LIBS = [libname])
+env.Prepend(CPPPATH = [filepath])
+env.Prepend(LIBPATH = [filepath])
+
+# --- build the test program
+env.Program(env.BuildSuffix('xmltest'),['tinyxml/xmltest.cpp'])
+

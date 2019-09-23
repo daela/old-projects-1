@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1233718038 source:z:\development\projects\queue\nxqueue.cpp
+	<boost/interprocess/sync/interprocess_mutex.hpp>
+	<boost/interprocess/sync/scoped_lock.hpp>
+	<boost/interprocess/sync/interprocess_condition.hpp>
+	<boost/thread/mutex.hpp>
+	<boost/thread/locks.hpp>
+	<boost/thread/condition_variable.hpp>
+	<boost/call_traits.hpp>
+	<boost/pool/object_pool.hpp>
+	<boost/scoped_ptr.hpp>
+	<iostream>
+	<string>
+	<windows.h>
+
+1234160077 source:z:\development\projects\queue\main.cpp
+	<nx/common.hpp>
+	<nx/thread/safe_blocking_queue.hpp>
+	<iostream>
+	<string>
+	<boost/thread/thread.hpp>
+	<fstream>
+
+1233962106 z:\development\projects\queue\nxqueue.hpp
+	<cstddef>
+	<boost/call_traits.hpp>
+	<boost/scoped_ptr.hpp>
+	<boost/static_assert.hpp>
+	<boost/thread/mutex.hpp>
+	<boost/thread/locks.hpp>
+	<boost/thread/condition_variable.hpp>
+

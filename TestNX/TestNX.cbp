@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TestNX" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug\TestNX" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release\TestNX" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="D:\Codebase" />
+		</Compiler>
+		<Unit filename="..\..\..\..\..\Codebase\nx\common.hpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\endian.cpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\endian.hpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\memory.hpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\number.cpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\number.hpp" />
+		<Unit filename="..\..\..\..\..\Codebase\nx\winos.hpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

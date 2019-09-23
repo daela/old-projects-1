@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="nxInput" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug\nxInput" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release\nxInput" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="$(#dx.lib)/dinput8.lib" />
+			<Add option="$(#dx.lib)/dxguid.lib" />
+			<Add option="$(#dx.lib)/xinput.lib" />
+			<Add option="$(#codebase.lib)/XIMCore.lib" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="nxCommon.cpp" />
+		<Unit filename="nxCommon.hpp" />
+		<Unit filename="nxInputManager.cpp" />
+		<Unit filename="nxInputManager.hpp" />
+		<Unit filename="nxIteratedFile.cpp" />
+		<Unit filename="nxIteratedFile.hpp" />
+		<Unit filename="nxLexer.cpp" />
+		<Unit filename="nxLexer.hpp" />
+		<Unit filename="nxLog.cpp" />
+		<Unit filename="nxLog.hpp" />
+		<Unit filename="nxRawInputDevice.cpp" />
+		<Unit filename="nxRawInputDevice.hpp" />
+		<Unit filename="nxThread.cpp" />
+		<Unit filename="nxThread.hpp" />
+		<Unit filename="nxUtility.cpp" />
+		<Unit filename="nxUtility.hpp" />
+		<Unit filename="nxXInputDevice.cpp" />
+		<Unit filename="nxXInputDevice.hpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1202263832 source:d:\gn\dev\portable\projects\common\importaddresstable.cpp
+	"ImportAddressTable.h"
+
+1202263825 d:\gn\dev\portable\projects\common\importaddresstable.h
+	<windows.h>
+	<algorithm>
+	<cctype>
+	<iostream>
+	<string>
+	<set>
+	<map>
+
+1202263832 source:c:\portable\projects\common\importaddresstable.cpp
+	"ImportAddressTable.h"
+
+1202263825 c:\portable\projects\common\importaddresstable.h
+	<windows.h>
+	<algorithm>
+	<cctype>
+	<iostream>
+	<string>
+	<set>
+	<map>
+
+1202333703 source:c:\portable\projects\coinject\main.cpp
+	"main.h"
+	<windows.h>
+	<string>
+	"../Common/ImportAddressTable.h"
+
+1202333596 c:\portable\projects\coinject\main.h
+	<windows.h>
+
+1217196989 source:d:\gn\dev\portable\projects\include\nac\importaddresstable.cpp
+	"ImportAddressTable.h"
+
+1202708134 d:\gn\dev\portable\projects\include\nac\importaddresstable.h
+	<windows.h>
+	<iostream>
+	<string>
+	<set>
+	<map>
+	"strmanip.h"
+
+1202452373 d:\gn\dev\portable\projects\include\nac\strmanip.h
+	<string>
+	<locale>
+	<iostream>
+
+1202452413 source:d:\gn\dev\portable\projects\include\nac\strmanip.cpp
+	"strmanip.h"
+
+1217206343 source:d:\gn\dev\portable\projects\coinject\main.cpp
+	<windows.h>
+	<string>
+	<nac/Process.h>
+	<nac/ImportAddressTable.h>
+	<nac/strmanip.h>
+
+1202696373 d:\gn\dev\portable\projects\include\nac\process.h
+	<windows.h>
+	<Tlhelp32.h>
+	<vector>
+	<string>
+	<map>
+	"Pipe.h"
+
+1202702360 d:\gn\dev\portable\projects\include\nac\pipe.h
+	<windows.h>
+	<string>
+	<sstream>
+
+1202702421 source:d:\gn\dev\portable\projects\include\nac\process.cpp
+	"Process.h"
+
+1202702377 source:d:\gn\dev\portable\projects\include\nac\pipe.cpp
+	"Pipe.h"
+

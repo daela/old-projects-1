@@ -1,0 +1,16 @@
+# vi:set syntax=python:
+
+# --- import the template environment
+SConscript('SCommon')
+Import('env_t')
+
+# --- generate help text for the options
+Help(env_t['cmdvars'].GenerateHelpText(env_t))
+
+# --- add library paths
+env = env_t.Clone()
+env.AddLibraryPath('curl')
+env.AddLibraryPath('nx')
+
+# --- start the build
+SConscript('SConscript', exports='env')

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TestParent" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug\TestParent" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="Release\TestParent" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="..\include" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Unit filename="..\include\nac\DllHook.cpp" />
+		<Unit filename="..\include\nac\DllHook.h" />
+		<Unit filename="..\include\nac\ImportAddressTable.cpp" />
+		<Unit filename="..\include\nac\ImportAddressTable.h" />
+		<Unit filename="..\include\nac\Pipe.cpp" />
+		<Unit filename="..\include\nac\Pipe.h" />
+		<Unit filename="..\include\nac\Process.cpp" />
+		<Unit filename="..\include\nac\Process.h" />
+		<Unit filename="..\include\nac\ProcessLauncher.cpp" />
+		<Unit filename="..\include\nac\ProcessLauncher.h" />
+		<Unit filename="..\include\nac\strmanip.cpp" />
+		<Unit filename="..\include\nac\strmanip.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,75 @@
+www.catgenie.com
+
+// Input state map, includes device id
+std::map<nxInputId,short> mpStates;
+
+
+bind +Razer:KB_A,-Razer:KB_B,Razer:MOUSE_AXIS>100,Joy:POV=2600 "+XIM_BUTTON;-XIM_BUTTON2;XIM_AXIS=$Razer:MOUSE_AXIS" "release_case"
+
+
+class ButtonId
+{
+	// -1 if we couldn't find the device during parsing, as we should know the device by that point in time.
+	nxDeviceId uDeviceId;
+	// -1 if we don't have it yet
+	nxInputId uInputId;
+	// uppercase storage of the input text (cleared when uInputId is used)
+	std::string strInputText;	
+}
+// If the device is -1, we return 0.
+
+InputState {
+	ButtonId objButton;
+	ComparisonType uComparison;
+	short sValue;
+	bool inState;
+}
+
+OutputState {
+	XIMBUTTON_TYPE xButton;
+	bool bInverted;
+	bool bIsValue;
+	short sValue;
+	ButtonId objButton; //button from which to take the value.  If the inputid is unknown, the value is zero
+}
+// One map for each binding
+// Purposefully a vector fo rinput state, so you can do XIM_A < bla;XIM_A>wee
+std::vector<std::pair<std::vector<InputState>,std::set<OutputState> > >
+
+
+bind +Razer:KB_A "+XIM_A;XIM_AXIS_X=$Razer:KB_A"
+
+Becomes...
+
+InputState
+{
+	ButtonString (with device id figured out already)
+	EQUALS
+	1 (or pressed)
+	false
+}
+OutputState
+{
+	XIM_A
+	false
+	true
+	1
+	unused
+}
+OutputState
+{
+	XIM_AXIS_X
+	false
+	false
+	unused
+	ButtonString (with device id figured out already)
+}
+
+For every button string added during load.
+std::map<std::string,std::list<ButtonId*> >;  Whenever a button is added, we'll add an entry to this list.
+
+// Ability to load new configs, and ability to set values like diagonaldampen within outputstate
+
+
+
+

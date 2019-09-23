@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1234464993 source:z:\development\projects\newcrypto\main.cpp
+	"passcrypt.h"
+	<cryptopp/sha.h>
+	<cryptopp/files.h>
+	<cryptopp/gzip.h>
+	<cryptopp/panama.h>
+	<cryptopp/serpent.h>
+	<cryptopp/sosemanuk.h>
+	<cryptopp/salsa.h>
+	<cryptopp/blowfish.h>
+
+1234465153 z:\development\projects\newcrypto\passcrypt.h
+	<cryptopp/rsa.h>
+	<cryptopp/pwdbased.h>
+	<cryptopp/filters.h>
+	<cryptopp/modes.h>
+	<ctime>
+
+1234464993 source:c:\development\projects\newcrypto\main.cpp
+	"passcrypt.h"
+	<cryptopp/sha.h>
+	<cryptopp/files.h>
+	<cryptopp/gzip.h>
+	<cryptopp/panama.h>
+	<cryptopp/serpent.h>
+	<cryptopp/sosemanuk.h>
+	<cryptopp/salsa.h>
+	<cryptopp/blowfish.h>
+
+1234465153 c:\development\projects\newcrypto\passcrypt.h
+	<cryptopp/rsa.h>
+	<cryptopp/pwdbased.h>
+	<cryptopp/filters.h>
+	<cryptopp/modes.h>
+	<ctime>
+
